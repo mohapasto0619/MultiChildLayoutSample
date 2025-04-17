@@ -323,7 +323,7 @@ class MyDelegate extends MultiChildLayoutDelegate {
     if (hasChild('map')) {
       mapSize = layoutChild(
         'map',
-        BoxConstraints.expand(
+        BoxConstraints.tightFor(
           width: (layoutWidth - (defaultHorizontalPadding) * 2) * mapRatio,
           height: (layoutHeight / 2.5) * mapRatio,
         ),
@@ -339,7 +339,7 @@ class MyDelegate extends MultiChildLayoutDelegate {
     if (hasChild('alarm')) {
       alarmSize = layoutChild(
         'alarm',
-        BoxConstraints.expand(
+        BoxConstraints.tightFor(
           width: layoutWidth - (defaultHorizontalPadding) * 2,
           height: layoutHeight / 4,
         ),
@@ -358,7 +358,7 @@ class MyDelegate extends MultiChildLayoutDelegate {
     if (hasChild('catch_me')) {
       catchMeSize = layoutChild(
         'catch_me',
-        BoxConstraints.expand(
+        BoxConstraints.tightFor(
           width: layoutWidth - (defaultHorizontalPadding) * 2,
           height: layoutHeight - (defaultVerticalPadding) * 2,
         ),

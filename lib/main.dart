@@ -179,7 +179,11 @@ class _MyHomePageState extends ConsumerState<MyHomePage>
         title: Text(widget.title),
       ),
       body: AnimatedBuilder(
-        animation: _alarmAnimationController,
+        animation: Listenable.merge([
+          _alarmAnimationController,
+          _mapAnimationController,
+          _addAnimationController,
+        ]),
         builder:
             (context, child) => CustomMultiChildLayout(
               delegate: MyDelegate(
